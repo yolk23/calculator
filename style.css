@@ -3,25 +3,72 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width:500px;
-    border:solid;
-    height:500px;
+    width:300px;
+    border:none;
+    height:380px;
+    border-radius:25px;
+    background-color:#393e46; ;
+   
 }
 h1{
-    text-align:center;
+text-align:center;
 }
 .solution{
- height:100px;
- border:solid;
+ height:50px;
+ width:30px;
  margin-top:1rem;
  margin-left: 5rem;
  margin-right:5rem;
+ text-align: right;
+ font-size:20px;
+ display: inline;
+
+}
+.solution #sol{
+    font-size: 40px;
+    border:none;
+    width:120px;
+    background-color:#393e46; 
+    color:white;
+    text-align: right;
+
+}
+.solution #answer{
+    font-size: 40px;
+    border:none;
+    width:120px;
+    background-color: #393e46; 
+    color:white;
+    text-align: center;
+    
 }
 .grid-container {
     display: grid;
-    gap: 1px;
+   
     grid-template-columns: repeat(4, 1fr);
-  }
-  .grid-item{
-    border:solid;
-  }
+}
+  .grid-item input{
+   width:74px;
+   height:52px;
+   color :white ;
+   background-color: grey;
+   text-align:center;
+   font-size:20px;
+   border:solid 1px;
+   border-color:black;
+   padding-top:5px;
+}
+ 
+.grid-item .total{
+   width:60px;
+   height:32px;
+   border:solid;
+   color:black;
+   background-color: grey;
+   text-align:center;
+   padding-top:5px;
+}
+  
+.grid-item .operations{
+    background-color: #f96d00;
+}
