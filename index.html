@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<script src="script.js"></script>
+        
+    <h1>Calculator</h1>
+    <div class="container" >
+        <form name="formCalc">
+        <div class="solution">
+            <input id="sol" type="text" name="sol">
+            <input id="answer" type="text" name="answer">
+        </div>
+        <div class="answer">
+            <input id="answer" type="text" name="answer">
+        </div>
+        <div class="grid-container">
+            <div class="grid-item"><button value="1" onclick="">AC</button></div>
+            <div class="grid-item"><button>C</button></div>
+            <div class="grid-item"><button>%</button></div>
+            <div class="grid-item"><button>/</button></div>
+            <div class="grid-item"><button>7</button></div>
+            <div class="grid-item"><button>8</button></div>
+            <div class="grid-item"><button>9</button></div>
+            <div class="grid-item"><input type="button" value="+" onclick="formCalc.sol.value += '+' ">+</div>
+            <div class="grid-item"><button>4</button></div>
+            <div class="grid-item"><button>5</button></div>
+            <div class="grid-item"><button>6</button></div>
+            <div class="grid-item"><button>-</button></div>
+            <div class="grid-item"><input type="button" value="1" onclick="formCalc.sol.value += '1' "></div>
+            <div class="grid-item"><input type="button" value="2" onclick="formCalc.sol.value += '2' "></div>
+            <div class="grid-item"><input type="button" value="3" onclick="formCalc.sol.value += '3' "></div>
+            <div class="grid-item"><input type="button" value="*" onclick="formCalc.sol.value += '*' "></div>
+            <div class="grid-item"><button>0</button></div>
+            <div class="grid-item"><button>.</button></div>
+            <div class="grid-item"><button>=</button></div>
+          </div>
+        </form>
+        <button onclick="totalValue()">Solution</button>
+        <button onclick="total()">Sol</button>
+    </div>
+    <script>
+       function total (){
+    
+        let result = eval(formCalc.sol.value);
+        formCalc.answer.value = result;
+      
+
+       }
+    </script>
+    
+  </body>
+</html>
