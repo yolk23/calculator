@@ -14,41 +14,50 @@
     <div class="container" >
         <form name="formCalc">
         <div class="solution">
-            <input id="sol" type="text" name="sol">
-            <input id="answer" type="text" name="answer">
+            <input id="sol" type="text" name="sol" readonly>
+            <input id="answer" type="text" name="answer" readonly>
         </div>
-        <div class="answer">
-            <input id="answer" type="text" name="answer">
-        </div>
+      
         <div class="grid-container">
-            <div class="grid-item"><button value="1" onclick="">AC</button></div>
-            <div class="grid-item"><input type="button" value="+" onclick=" "></div>
-            <div class="grid-item"><input type="button" value="%" onclick="formCalc.sol.value += '%' "></div>
-            <div class="grid-item"><input type="button" value="/" onclick="formCalc.sol.value += '/' "></div>
+            <div class="grid-item"><input type="button" value ="AC"onclick="resetValue()"></button></div>
+            <div class="grid-item"><input type="button" value="+" onclick=" formCalc.sol.value += '+' "></div>
+            <div class="grid-item"><input type="button" value="%" onclick="percent()"></div>
+            <div class="grid-item"><input type="button" value="/" onclick="formCalc.sol.value += '/' " class="operations"></div>
             <div class="grid-item"><input type="button" value="7" onclick="formCalc.sol.value += '7' "></div>
             <div class="grid-item"><input type="button" value="8" onclick="formCalc.sol.value += '8' "></div>
             <div class="grid-item"><input type="button" value="9" onclick="formCalc.sol.value += '9' "></div>
-            <div class="grid-item"><input type="button" value="+" onclick="formCalc.sol.value += '+' "></div>
+            <div class="grid-item"><input type="button" value="+" onclick="formCalc.sol.value += '+' " class="operations"></div>
             <div class="grid-item"><input type="button" value="4" onclick="formCalc.sol.value += '4' "></div>
             <div class="grid-item"><input type="button" value="5" onclick="formCalc.sol.value += '5' "></div>
             <div class="grid-item"><input type="button" value="6" onclick="formCalc.sol.value += '6' "></div>
-            <div class="grid-item"><input type="button" value="-" onclick="formCalc.sol.value += '-' "></div>
+            <div class="grid-item"><input type="button" value="-" onclick="formCalc.sol.value += '-' " class="operations"></div>
             <div class="grid-item"><input type="button" value="1" onclick="formCalc.sol.value += '1' "></div>
             <div class="grid-item"><input type="button" value="2" onclick="formCalc.sol.value += '2' "></div>
             <div class="grid-item"><input type="button" value="3" onclick="formCalc.sol.value += '3' "></div>
-            <div class="grid-item"><input type="button" value="*" onclick="formCalc.sol.value += '*' "></div>
+            <div class="grid-item"><input type="button" value="*" onclick="formCalc.sol.value += '*' " class="operations"></div>
             <div class="grid-item"><input type="button" value="0" onclick="formCalc.sol.value += '0' "></div>
             <div class="grid-item"><input type="button" value="." onclick="formCalc.sol.value += '.' "></div>
-            <div class="grid-item"><button onclick="total()">=</button></div>
+            <div class="grid-item"><input type="button" onclick="total()" value="="></div>
           </div>
         </form>
         
     </div>
     <script>
+       var result;
        function total (){
-        let result = eval(formCalc.sol.value);
+        result = eval(formCalc.sol.value);
         formCalc.answer.value = result;
        }
+       function resetValue (){
+        formCalc.sol.value = "";
+        formCalc.answer.value = "";
+       }
+       function percent(){
+        result = eval(formCalc.sol.value);
+        formCalc.answer.value = result/100;
+        
+       }
+    
     </script>
     
   </body>
